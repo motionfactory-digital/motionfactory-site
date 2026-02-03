@@ -1188,16 +1188,12 @@ function showTab(tabId){
   document.getElementById(tabId).classList.add('active');
   document.getElementById(tabId + '-btn').classList.add('active');
 
-  // Keep the tabs visible after click
-  const tabs = document.getElementById('tabs');
-  tabs.scrollIntoView({behavior:'smooth', block:'start'});
 </script>
 
 <style>
- /* ==== HARD MOBILE FIX (ANDROID SAFE) ==== */
-*,
-*::before,
-*::after {
+/* ===== HARD MOBILE FIX (ANDROID SAFE) ===== */
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -1207,20 +1203,29 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Kill vh-based clipping */
-section,.panel,
-.tab-content,
-.container {
-  height: auto !important;
-  min-height: auto !important;
-  max-width: 100%;
-  </style>
-}
 /* Prevent text cut-off */
 h1, h2, h3, p, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
+/* Proof section background safety */
+.proof-section {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
 
-/* Proof section background – unbreakable */
+/* Mobile padding fix */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 140px;
+  }
+}
+</style>
 .proof-section {
   position: relative;
   width: 100%;
