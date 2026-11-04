@@ -118,6 +118,14 @@ button{font:inherit}
 .hero h1 span{display:inline-block;font-weight:900;transform:skewX(-11deg);transform-origin:left bottom;padding-right:.15em}
 @media(max-width:740px){.hero h1{-webkit-text-stroke:.35px currentColor}.hero h1 span{transform:skewX(-10deg)}}
 
+
+/* Editorial uppercase service statement */
+.hero-description{max-width:1000px;text-transform:uppercase;font-size:clamp(15px,1.18vw,22px);font-weight:650;letter-spacing:.055em;line-height:1.65;text-wrap:pretty}
+.hero-services,.hero-industries{display:block}
+.hero-services{color:#f3f4f6}
+.hero-industries{margin-top:18px;color:#aeb4bd;font-size:.85em;font-weight:500;letter-spacing:.075em;max-width:920px}
+@media(max-width:740px){.hero-description{font-size:14px;letter-spacing:.045em;line-height:1.65}.hero-industries{margin-top:16px;font-size:12px;letter-spacing:.06em}}
+
 </style>
 
 </head>
@@ -144,7 +152,7 @@ button{font:inherit}
 <div class="hero-content">
 <p class="hero-eyebrow">VIDEO <span>/</span> ANIMATION <span>/</span> CONTENT</p>
 <h1 id="hero-heading">Blockchain &amp; Fintech<br/><span>Video Production</span></h1>
-<p class="hero-description">High-level content including animated explainers, protocol and product videos, growth campaign content, onboarding and tutorial videos. A full creative production suite for Web3, blockchain, crypto, pre-sales and fintech projects.</p>
+<p class="hero-description"><span class="hero-services">High-level content including animated explainers, protocol and product videos, growth campaign content, onboarding and tutorial videos.</span><span class="hero-industries">A full creative production suite for Web3, blockchain, crypto, pre-sales and fintech projects.</span></p>
 </div>
 </section>
 <section aria-label="Brands and projects we've worked with" class="brands-bar" id="clients">
